@@ -3,25 +3,28 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --background-color: #f5f5f4;
+  --secondary-background-color: #e7e5e4;
+  --heading-color: #0f172a;
+  --paragraph-color: #334155;
+  --error-background: #fecaca;
+  --error-text: #991b1b;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--background-color);
+  color: var(--paragraph-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+}
+
+.card {
+  background-color: var(--secondary-background-color);
+}
+
+.errorCard {
+  background-color: var(--error-background);
+	color: var(--error-text);
 }
